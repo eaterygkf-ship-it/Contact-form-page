@@ -46,8 +46,8 @@ export async function POST(req: Request) {
       from: "Appointments <onboarding@resend.dev>",
       to: [mailId],
       subject: "Appointment Confirmed",
-      text: "Your Appointment has been booked",
-      html: `<p>Your Appointment has been booked</p>`,
+      text: "Your Appointment has been booked successfully.",
+      html: `<p>Your Appointment has been booked successfully.</p>`,
     })
 
     // In a real app you could also persist the submission here.
