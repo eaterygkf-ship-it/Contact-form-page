@@ -68,3 +68,13 @@
             return NextResponse.json({
             ok: true,
             message: "Appointment submitted and email sent successfully.",
+    ok: true,
+            message: "Appointment submitted and email sent successfully.",
+            });
+        } catch (err) {
+            console.error("[v0] Email send failed:", (err as Error).message);
+            return NextResponse.json(
+            { ok: false, error: "Failed to send confirmation email." },
+            { status: 500 }
+            );
+        }
